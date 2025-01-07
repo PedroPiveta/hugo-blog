@@ -5,7 +5,7 @@
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Blog Pedro Piveta</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>pt-BR</language>
     <lastBuildDate>Tue, 07 Jan 2025 13:33:38 -0300</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025 01 07</title>
@@ -13,12 +13,10 @@
       <pubDate>Tue, 07 Jan 2025 13:33:38 -0300</pubDate>
       
       <guid>http://localhost:1313/posts/2025-01-07/</guid>
-      <description>Introduction Test text
-Console.Write(&amp;#34;Hello World&amp;#34;); </description>
-      <content>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Test text&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Console.Write(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+      <description>Porque criei esse blog? Meu principal objetivo é testar tecnologias como o Hugo, mas além disso esse blog servirá como uma forma de compartilhar coisas desde projetos até o que estou aprendendo no momento</description>
+      <content>&lt;h2 id=&#34;porque-criei-esse-blog&#34;&gt;Porque criei esse blog?&lt;/h2&gt;
+&lt;p&gt;Meu principal objetivo é testar tecnologias como o Hugo, mas além disso esse blog servirá como uma forma de compartilhar coisas desde projetos até o que estou aprendendo no momento&lt;/p&gt;
+</content>
     </item>
     
   </channel>
