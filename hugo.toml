@@ -1,0 +1,4 @@
+baseURL = 'https://blog.pedropiveta.com.br/'
+languageCode = 'en-us'
+title = 'Blog Pedro Piveta'
+theme = 'terminal'
