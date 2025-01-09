@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Book on Blog Pedro Piveta</title>
+    <link>http://localhost:1313/tags/book/</link>
+    <description>Recent content in Book on Blog Pedro Piveta</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Thu, 09 Jan 2025 13:31:25 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/book/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recomendação Livro</title>
+      <link>http://localhost:1313/posts/recomendacao-livro/</link>
+      <pubDate>Thu, 09 Jan 2025 13:31:25 -0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/recomendacao-livro/</guid>
+      <description>Estive lendo esse livro sobre C, assembly e arquitetura x86-64</description>
+      <content>&lt;p&gt;Estive lendo esse livro sobre C, assembly e arquitetura x86-64&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
