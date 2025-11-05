@@ -4,15 +4,6 @@ title = 'Blog Pedro Piveta'
 theme = 'terminal'
 
 [params]
-    showMenuItems = 2
-    fullWidthTheme = false
-    centerTheme = false
-    autoCover = true
-    
-    [params.twitter]
-        creator = "PedroPiBarrotti"
-        site = "PedroPiBarrotti"
-
     [params.logo]
         logoText = "Blog Pedro Piveta"
 

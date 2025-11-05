@@ -4,16 +4,21 @@
     <title>Recomendacao on Blog Pedro Piveta</title>
     <link>http://localhost:1313/tags/recomendacao/</link>
     <description>Recent content in Recomendacao on Blog Pedro Piveta</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Thu, 09 Jan 2025 13:31:25 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/recomendacao/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jan 2025 13:31:25 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/recomendacao/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recomendação Livro</title>
       <link>http://localhost:1313/posts/recomendacao-livro/</link>
       <pubDate>Thu, 09 Jan 2025 13:31:25 -0300</pubDate>
+      
       <guid>http://localhost:1313/posts/recomendacao-livro/</guid>
-      <description>&lt;p&gt;Estive lendo um livro fascinante sobre &lt;strong&gt;C, Assembly e arquitetura x86-64&lt;/strong&gt;, que abriu minha mente para compreender como muitas coisas funcionam nos bastidores. O conteúdo explora desde os &lt;strong&gt;fundamentos da arquitetura de processadores&lt;/strong&gt;, &lt;strong&gt;funcionamento e utilidade dos registradores&lt;/strong&gt; e vários &lt;strong&gt;conceitos utilizados na programação em C&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Se você, assim como eu, aprecia &amp;ldquo;escovar bits&amp;rdquo;, este livro é uma leitura indispensável. Ele serve como uma excelente introdução para quem deseja mergulhar no universo da programação de baixo nível e compreender as camadas mais profundas que sustentam o software que utilizamos no dia a dia.&lt;/p&gt;</description>
+      <description>Estive lendo um livro fascinante sobre C, Assembly e arquitetura x86-64, que abriu minha mente para compreender como muitas coisas funcionam nos bastidores. O conteúdo explora desde os fundamentos da arquitetura de processadores até a implementação de conceitos avançados, como o polimorfismo em C.
+Se você, assim como eu, aprecia &amp;ldquo;escovar bits&amp;rdquo;, este livro é uma leitura indispensável. Ele serve como uma excelente introdução para quem deseja mergulhar no universo da programação de baixo nível e compreender as camadas mais profundas que sustentam o software que utilizamos no dia a dia.</description>
+      <content>&lt;p&gt;Estive lendo um livro fascinante sobre C, Assembly e arquitetura x86-64, que abriu minha mente para compreender como muitas coisas funcionam nos bastidores. O conteúdo explora desde os fundamentos da arquitetura de processadores até a implementação de conceitos avançados, como o polimorfismo em C.&lt;/p&gt;
+&lt;p&gt;Se você, assim como eu, aprecia &amp;ldquo;escovar bits&amp;rdquo;, este livro é uma leitura indispensável. Ele serve como uma excelente introdução para quem deseja mergulhar no universo da programação de baixo nível e compreender as camadas mais profundas que sustentam o software que utilizamos no dia a dia.&lt;/p&gt;
+</content>
     </item>
+    
   </channel>
 </rss>
