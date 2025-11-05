@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pytorch on Blog Pedro Piveta</title>
+    <link>http://localhost:1313/tags/pytorch/</link>
+    <description>Recent content in Pytorch on Blog Pedro Piveta</description>
+    <generator>Hugo</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Tue, 04 Nov 2025 22:52:35 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aprendizagem Pytorch</title>
+      <link>http://localhost:1313/posts/aprendizagem-pytorch/</link>
+      <pubDate>Tue, 04 Nov 2025 22:52:35 -0300</pubDate>
+      <guid>http://localhost:1313/posts/aprendizagem-pytorch/</guid>
+      <description>&lt;h1 id=&#34;este-post-vai-servir-como-base-de-anotações-para-meus-estudos-sobre-pytorch&#34;&gt;Este post vai servir como base de anotações para meus estudos sobre Pytorch.&lt;/h1&gt;&#xA;&lt;p&gt;Pytorch é uma biblioteca de machine learning desenvolvida pelo Facebook AI Research (FAIR). Ela é amplamente utilizada para tarefas de aprendizado profundo (deep learning) e oferece uma interface flexível e dinâmica para a construção e treinamento de redes neurais.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
