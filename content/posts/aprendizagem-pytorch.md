@@ -20,9 +20,14 @@ Servir como um guia de referência para PyTorch e Machine Learning.
 
 Conforme for evoluindo no PyTorch
 
-## O que é o PyTorch?
+# O que é o PyTorch?
 
 Pytorch é uma biblioteca de machine learning desenvolvida pelo Facebook AI Research (FAIR). Ela é amplamente utilizada para tarefas de aprendizado profundo (deep learning) e oferece uma interface flexível e dinâmica para a construção e treinamento de redes neurais.
+
+<details>
+<summary>
+Tensores
+</summary>
 
 ## O que são Tensores?
 
@@ -234,4 +239,6 @@ model = model.to(device)
 ```
 
 Usar GPU **reduz drasticamente o tempo de treinamento**, pois GPUs são otimizadas para operações matriciais e paralelização em larga escala.
+
+</details>
 

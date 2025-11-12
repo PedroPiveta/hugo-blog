@@ -6,14 +6,14 @@
     <description>Recent content in Programação on Blog Pedro Piveta</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Tue, 04 Nov 2025 22:52:35 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 11 Nov 2025 21:34:35 -0300</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/programa%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Aprendizagem Pytorch</title>
       <link>http://localhost:1313/posts/aprendizagem-pytorch/</link>
-      <pubDate>Tue, 04 Nov 2025 22:52:35 -0300</pubDate>
+      <pubDate>Tue, 11 Nov 2025 21:34:35 -0300</pubDate>
       <guid>http://localhost:1313/posts/aprendizagem-pytorch/</guid>
-      <description>&lt;h1 id=&#34;intuito-do-post&#34;&gt;Intuito do post:&lt;/h1&gt;&#xA;&lt;p&gt;Servir como um guia de referência para PyTorch&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-é-o-pytorch&#34;&gt;O que é o PyTorch?&lt;/h2&gt;&#xA;&lt;p&gt;Pytorch é uma biblioteca de machine learning desenvolvida pelo Facebook AI Research (FAIR). Ela é amplamente utilizada para tarefas de aprendizado profundo (deep learning) e oferece uma interface flexível e dinâmica para a construção e treinamento de redes neurais.&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-são-tensores&#34;&gt;O que são Tensores?&lt;/h2&gt;&#xA;&lt;p&gt;Os &lt;strong&gt;tensores&lt;/strong&gt; são estruturas de dados fundamentais em &lt;em&gt;machine learning&lt;/em&gt; que generalizam números, vetores e matrizes para múltiplas dimensões. Eles servem para representar e processar dados numéricos de forma eficiente, sendo usados para armazenar entradas, pesos e saídas de modelos de aprendizado de máquina. Em frameworks como &lt;strong&gt;TensorFlow&lt;/strong&gt; e &lt;strong&gt;PyTorch&lt;/strong&gt;, os tensores permitem realizar operações matemáticas em larga escala e de maneira otimizada, especialmente em GPUs, além de possibilitar o cálculo automático de gradientes, essencial para o treinamento de redes neurais.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;intuito-do-post&#34;&gt;Intuito do post:&lt;/h1&gt;&#xA;&lt;p&gt;Servir como um guia de referência para PyTorch e Machine Learning.&lt;/p&gt;&#xA;&lt;p&gt;Conforme for evoluindo no PyTorch&lt;/p&gt;&#xA;&lt;h1 id=&#34;o-que-é-o-pytorch&#34;&gt;O que é o PyTorch?&lt;/h1&gt;&#xA;&lt;p&gt;Pytorch é uma biblioteca de machine learning desenvolvida pelo Facebook AI Research (FAIR). Ela é amplamente utilizada para tarefas de aprendizado profundo (deep learning) e oferece uma interface flexível e dinâmica para a construção e treinamento de redes neurais.&lt;/p&gt;&#xA;&lt;details&gt;&#xA;&lt;summary?&gt;Tensores&lt;/summary&gt;&#xA;&lt;h2 id=&#34;o-que-são-tensores&#34;&gt;O que são Tensores?&lt;/h2&gt;&#xA;&lt;p&gt;Os &lt;strong&gt;tensores&lt;/strong&gt; são estruturas de dados fundamentais em &lt;em&gt;machine learning&lt;/em&gt; que generalizam números, vetores e matrizes para múltiplas dimensões. Eles servem para representar e processar dados numéricos de forma eficiente, sendo usados para armazenar entradas, pesos e saídas de modelos de aprendizado de máquina. Em frameworks como &lt;strong&gt;TensorFlow&lt;/strong&gt; e &lt;strong&gt;PyTorch&lt;/strong&gt;, os tensores permitem realizar operações matemáticas em larga escala e de maneira otimizada, especialmente em GPUs, além de possibilitar o cálculo automático de gradientes, essencial para o treinamento de redes neurais.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

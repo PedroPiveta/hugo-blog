@@ -3,6 +3,11 @@ languageCode = 'pt-BR'
 title = 'Blog Pedro Piveta'
 theme = 'terminal'
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
     showMenuItems = 2
     fullWidthTheme = false
