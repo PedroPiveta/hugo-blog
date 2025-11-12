@@ -18,7 +18,7 @@ draft = false
 
 Servir como um guia de referência para PyTorch e Machine Learning.
 
-Conforme for evoluindo no PyTorch
+Pretendo atualizar esse post conforme eu for evoluindo no PyTorch.
 
 # O que é o PyTorch?
 
