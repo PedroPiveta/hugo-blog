@@ -1,0 +1,22 @@
+# Pasta de saída do Hugo (build)
+public/
+resources/_gen/
+
+# Arquivos de cache do Hugo
+.cache/
+hugo_stats.json
+
+# Configurações do editor / sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Node modules, se você usar npm/yarn para assets
+node_modules/
+
+# Logs e arquivos temporários
+*.log
+*.tmp
