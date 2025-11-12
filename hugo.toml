@@ -1,23 +1,58 @@
-baseURL = 'https://blog.pedropiveta.com.br/'
-languageCode = 'pt-BR'
-title = 'Blog Pedro Piveta'
-theme = 'terminal'
+baseURL = "https://blog.pedropiveta.com.br/"
+languageCode = "pt-br"
+pagination.pagerSize = 5
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
 
+[markup.highlight]
+  noClasses = false
+
 [params]
-    showMenuItems = 2
-    fullWidthTheme = false
-    centerTheme = false
-    autoCover = true
-    
-    [params.twitter]
-        creator = "PedroPiBarrotti"
-        site = "PedroPiBarrotti"
+  contentTypeName = "posts"
+  showMenuItems = 2
+  showLanguageSelector = false
+  fullWidthTheme = false
+  centerTheme = false
+  autoCover = true
+  showLastUpdated = false
 
-    [params.logo]
-        logoText = "Blog Pedro Piveta"
+[params.twitter]
+  creator = "PedroPiBarrotti"
+  site = "PedroPiBarrotti"
 
+[languages]
+  [languages.pt]
+    languageName = "Português"
+    title = "Blog Pedro Piveta"
+
+    [languages.pt.params]
+      subtitle = "Um tema simples e retrô para Hugo"
+      owner = "Pedro Piveta Barrotti"
+      keywords = ""
+      copyright = ""
+      menuMore = "Mostrar mais"
+      readMore = "Leia mais"
+      readOtherPosts = "Leia outros posts"
+      newerPosts = "Posts mais novos"
+      olderPosts = "Posts mais antigos"
+      missingContentMessage = "Página não encontrada..."
+      missingBackButtonLabel = "Voltar para a página inicial"
+      minuteReadingTime = "min de leitura"
+      words = "palavras"
+
+      [languages.pt.params.logo]
+        logoText = "Blog Pedro Piveta Barrotti"
+        logoHomeLink = "/"
+
+      [languages.pt.menu]
+        [[languages.pt.menu.main]]
+          identifier = "portfolio"
+          name = "Portfólio"
+          url = "https://www.pedropiveta.com.br"
+
+[module]
+  [[module.imports]]
+    path = "github.com/panr/hugo-theme-terminal/v4"
