@@ -11,6 +11,7 @@ description = "Recomendação de livro"
 showFullContent = false
 readingTime = false
 hideComments = false
+draft = true
 +++
 
 Estive lendo um livro fascinante sobre **C, Assembly e arquitetura x86-64**, que abriu minha mente para compreender como muitas coisas funcionam nos bastidores. O conteúdo explora desde os **fundamentos da arquitetura de processadores**, **funcionamento e utilidade dos registradores** e vários **conceitos utilizados na programação em C**.

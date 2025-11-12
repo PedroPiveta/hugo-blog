@@ -29,19 +29,5 @@
       <guid>http://localhost:1313/tags/pytorch/</guid>
       <description></description>
     </item>
-    <item>
-      <title>Livros</title>
-      <link>http://localhost:1313/tags/livros/</link>
-      <pubDate>Thu, 09 Jan 2025 13:31:25 -0300</pubDate>
-      <guid>http://localhost:1313/tags/livros/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Recomendacao</title>
-      <link>http://localhost:1313/tags/recomendacao/</link>
-      <pubDate>Thu, 09 Jan 2025 13:31:25 -0300</pubDate>
-      <guid>http://localhost:1313/tags/recomendacao/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>

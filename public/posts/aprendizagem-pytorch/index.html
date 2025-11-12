@@ -90,7 +90,7 @@
 <meta property="og:image:height" content="627">
 
 
-  <meta property="article:published_time" content="2025-11-04 22:52:35 -0300 -03" />
+  <meta property="article:published_time" content="2025-11-11 21:34:35 -0300 -03" />
 
 
 
@@ -132,7 +132,7 @@
   <h1 class="post-title">
     <a href="http://localhost:1313/posts/aprendizagem-pytorch/">Aprendizagem Pytorch</a>
   </h1>
-  <div class="post-meta"><time class="post-date">2025-11-04</time><span class="post-author">Pedro Piveta Barrotti</span></div>
+  <div class="post-meta"><time class="post-date">2025-11-11</time><span class="post-author">Pedro Piveta Barrotti</span><span class="post-reading-time">5 min read (864 words)</span></div>
 
   
     <span class="post-tags">
@@ -155,8 +155,144 @@
   
 
   <div class="post-content"><div>
-        <h1 id="este-post-vai-servir-como-base-de-anotações-para-meus-estudos-sobre-pytorch">Este post vai servir como base de anotações para meus estudos sobre Pytorch.<a href="#este-post-vai-servir-como-base-de-anotações-para-meus-estudos-sobre-pytorch" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+        <h1 id="intuito-do-post">Intuito do post:<a href="#intuito-do-post" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<p>Servir como um guia de referência para PyTorch e Machine Learning.</p>
+<p>Conforme for evoluindo no PyTorch</p>
+<h2 id="o-que-é-o-pytorch">O que é o PyTorch?<a href="#o-que-é-o-pytorch" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>Pytorch é uma biblioteca de machine learning desenvolvida pelo Facebook AI Research (FAIR). Ela é amplamente utilizada para tarefas de aprendizado profundo (deep learning) e oferece uma interface flexível e dinâmica para a construção e treinamento de redes neurais.</p>
+<h2 id="o-que-são-tensores">O que são Tensores?<a href="#o-que-são-tensores" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Os <strong>tensores</strong> são estruturas de dados fundamentais em <em>machine learning</em> que generalizam números, vetores e matrizes para múltiplas dimensões. Eles servem para representar e processar dados numéricos de forma eficiente, sendo usados para armazenar entradas, pesos e saídas de modelos de aprendizado de máquina. Em frameworks como <strong>TensorFlow</strong> e <strong>PyTorch</strong>, os tensores permitem realizar operações matemáticas em larga escala e de maneira otimizada, especialmente em GPUs, além de possibilitar o cálculo automático de gradientes, essencial para o treinamento de redes neurais.</p>
+<h2 id="criação-e-tipos-de-tensores">Criação e tipos de tensores<a href="#criação-e-tipos-de-tensores" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>Scalar: um único valor numérico (0D).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>scalar <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor(<span style="color:#ae81ff">7</span>)
+</span></span></code></pre></div><ul>
+<li>Vector: uma sequência de valores (1D)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>vector <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor([<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">7</span>])
+</span></span></code></pre></div><ul>
+<li>Matrix: uma tabela de valores com linhas e colunas (2D)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>MATRIX <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor([[<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>],
+</span></span><span style="display:flex;"><span>                       [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]])
+</span></span></code></pre></div><ul>
+<li>Tensor: uma generalização de matrizes para mais dimensões (3D ou superior)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>TENSOR <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor([[[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>],
+</span></span><span style="display:flex;"><span>                        [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">9</span>],
+</span></span><span style="display:flex;"><span>                        [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]]])
+</span></span></code></pre></div><h3 id="criação-de-tensor-aleatório">Criação de Tensor aleatório<a href="#criação-de-tensor-aleatório" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Cria um tensor de tamanho (3, 4) com valores aleatórios</span>
+</span></span><span style="display:flex;"><span>random_tensor <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>rand(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>)
+</span></span></code></pre></div><h3 id="criação-de-um-tensor-cheio-de-zeros">Criação de um Tensor cheio de zeros<a href="#criação-de-um-tensor-cheio-de-zeros" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>zeros <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>zeros(size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>))
+</span></span></code></pre></div><h3 id="criação-um-tensor-a-partir-de-um-range">Criação um tensor a partir de um &ldquo;range&rdquo;<a href="#criação-um-tensor-a-partir-de-um-range" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>one_to_ten <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>arange(start<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, end<span style="color:#f92672">=</span><span style="color:#ae81ff">11</span>, step<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># tensor([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])</span>
+</span></span></code></pre></div><h3 id="criação-de-um-tensor-like-cheio-de-zeros">Criação de um &ldquo;tensor-like&rdquo; cheio de zeros<a href="#criação-de-um-tensor-like-cheio-de-zeros" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ten_zeroes <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>zeros_like(one_to_ten)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])</span>
+</span></span></code></pre></div><h3 id="extração-de-informação-sobre-os-tensores-tensor-attributes">Extração de informação sobre os Tensores (tensor attributes)<a href="#extração-de-informação-sobre-os-tensores-tensor-attributes" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>Número de dimensões de um Tensor: <code>tensor.ndim</code></li>
+<li>Formato de um Tensor: <code>tensor.shape</code></li>
+<li>Tipo de dado um Tensor: <code>tensor.dtype</code></li>
+<li>Dispositivo que o Tensor está: <code>tensor.device</code></li>
+</ul>
+<h2 id="manipulação-de-tensores-tensor-operations">Manipulação de Tensores (tensor operations)<a href="#manipulação-de-tensores-tensor-operations" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="adição">Adição<a href="#adição" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Cria um tensor e adiciona 10 de todos seus elementos</span>
+</span></span><span style="display:flex;"><span>tensor <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+</span></span><span style="display:flex;"><span>tensor <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># tensor([11, 12, 13])</span>
+</span></span></code></pre></div><h3 id="subtração">Subtração<a href="#subtração" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Subtrai 10 de todos seus elementos</span>
+</span></span><span style="display:flex;"><span>tensor <span style="color:#f92672">-</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># tensor([-9, -8, -7])</span>
+</span></span></code></pre></div><h3 id="multiplicação-element-wise">Multiplicação (element-wise)<a href="#multiplicação-element-wise" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Multiplica todos seus elementos por 10</span>
+</span></span><span style="display:flex;"><span>tensor <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span>
+</span></span></code></pre></div><h3 id="divisão">Divisão<a href="#divisão" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Divide todos os elementos por 10</span>
+</span></span><span style="display:flex;"><span>tensor <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>
+</span></span></code></pre></div><h3 id="multiplicação-de-matrizes">Multiplicação de matrizes<a href="#multiplicação-de-matrizes" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Existem duas regras principais para executar uma multiplicação de matrizes</p>
+<ol>
+<li>As dimensões de dentro devem ser iguais:</li>
+</ol>
+<ul>
+<li><code>(3, 2) @ (3, 2)</code> não funciona</li>
+<li><code>(2, 3) @ (3, 2)</code> funciona pois as dimensões de dentro são iguais</li>
+</ul>
+<ol start="2">
+<li>A matrix resultante vai ter o formato das dimensões mais para fora</li>
+</ol>
+<ul>
+<li><code>(2, 3) @ (3, 2)</code> -&gt; <code>(2, 2)</code></li>
+<li><code>(3, 2) @ (2, 3)</code> -&gt; <code>(3, 3)</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Executando multiplicação de matrizes</span>
+</span></span><span style="display:flex;"><span>torch<span style="color:#f92672">.</span>matmul(tensor, tensor)
+</span></span></code></pre></div><h3 id="transposição-de-matrizes">Transposição de matrizes<a href="#transposição-de-matrizes" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>A <strong>transposição</strong> troca as <strong>linhas pelas colunas</strong> de uma matriz, alterando sua orientação.
+Ela é útil, por exemplo, quando precisamos ajustar as dimensões para que duas matrizes possam ser multiplicadas.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Transpondo uma matriz</span>
+</span></span><span style="display:flex;"><span>tensor_t <span style="color:#f92672">=</span> tensor<span style="color:#f92672">.</span>T  <span style="color:#75715e"># ou tensor.transpose(0, 1)</span>
+</span></span></code></pre></div><p>Exemplo:</p>
+<ul>
+<li><code>tensor.shape = (2, 3)</code></li>
+<li><code>tensor_t.shape = (3, 2)</code></li>
+</ul>
+<p>Com isso, agora é possível fazer:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>torch<span style="color:#f92672">.</span>matmul(tensor, tensor_t)  <span style="color:#75715e"># (2, 3) @ (3, 2) -&gt; (2, 2)</span>
+</span></span></code></pre></div><h3 id="agregação-de-tensores-tensor-aggregation">Agregação de tensores (tensor aggregation)<a href="#agregação-de-tensores-tensor-aggregation" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>A <strong>agregação de tensores</strong> combina valores em um único resultado aplicando funções como <strong>mínimo</strong>, <strong>máximo</strong>, <strong>média</strong> ou <strong>soma</strong> sobre uma ou mais dimensões.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>torch<span style="color:#f92672">.</span>min(tensor)   <span style="color:#75715e"># menor valor</span>
+</span></span><span style="display:flex;"><span>torch<span style="color:#f92672">.</span>max(tensor)   <span style="color:#75715e"># maior valor</span>
+</span></span><span style="display:flex;"><span>torch<span style="color:#f92672">.</span>mean(tensor)  <span style="color:#75715e"># média dos valores</span>
+</span></span><span style="display:flex;"><span>torch<span style="color:#f92672">.</span>sum(tensor)   <span style="color:#75715e"># soma de todos os valores</span>
+</span></span></code></pre></div><h3 id="encontrando-a-posição-do-mínimo-e-do-máximo">Encontrando a posição do mínimo e do máximo<a href="#encontrando-a-posição-do-mínimo-e-do-máximo" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tensor<span style="color:#f92672">.</span>argmin()
+</span></span><span style="display:flex;"><span>tensor<span style="color:#f92672">.</span>argmax()
+</span></span></code></pre></div><h3 id="reformatação-empilhamento-e-ajuste-de-dimensões-de-tensores">Reformatação, empilhamento e ajuste de dimensões de tensores<a href="#reformatação-empilhamento-e-ajuste-de-dimensões-de-tensores" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li><strong>Reshape</strong> – redefine o formato de um tensor para uma nova forma especificada.</li>
+<li><strong>View</strong> – cria uma <em>view</em> (visão) do tensor com outra forma, <strong>sem copiar os dados</strong> na memória.</li>
+<li><strong>Stack</strong> – empilha múltiplos tensores, seja <strong>um sobre o outro</strong> (verticalmente) ou <strong>lado a lado</strong> (horizontalmente).</li>
+<li><strong>Squeeze</strong> – remove todas as dimensões com tamanho <code>1</code> de um tensor.</li>
+<li><strong>Unsqueeze</strong> – adiciona uma dimensão de tamanho <code>1</code> em uma posição específica.</li>
+<li><strong>Permute</strong> – retorna uma <em>view</em> do tensor com as dimensões <strong>trocadas</strong> em uma nova ordem.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Exemplos</span>
+</span></span><span style="display:flex;"><span>torch<span style="color:#f92672">.</span>reshape(tensor, (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>))
+</span></span><span style="display:flex;"><span>tensor<span style="color:#f92672">.</span>view(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>torch<span style="color:#f92672">.</span>stack([t1, t2], dim<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>tensor<span style="color:#f92672">.</span>squeeze()
+</span></span><span style="display:flex;"><span>tensor<span style="color:#f92672">.</span>unsqueeze(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>tensor<span style="color:#f92672">.</span>permute(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)
+</span></span></code></pre></div><h2 id="reprodutibilidade-controlando-a-aleatoriedade">Reprodutibilidade (controlando a aleatoriedade)<a href="#reprodutibilidade-controlando-a-aleatoriedade" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>As <strong>seeds</strong> (sementes aleatórias) servem para <strong>tornar os resultados reproduzíveis</strong> em experimentos de <em>machine learning</em>.
+Ao definir uma seed, você garante que as operações aleatórias — como inicialização de pesos, embaralhamento de dados ou geração de amostras — produzam sempre os mesmos resultados em execuções diferentes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Definindo uma seed em PyTorch</span>
+</span></span><span style="display:flex;"><span>torch<span style="color:#f92672">.</span>manual_seed(<span style="color:#ae81ff">42</span>)
+</span></span><span style="display:flex;"><span>torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>manual_seed(<span style="color:#ae81ff">42</span>)
+</span></span></code></pre></div><p>Isso é essencial para <strong>comparar modelos</strong>, <strong>depurar código</strong> e <strong>validar experimentos</strong> de forma consistente.</p>
+<h3 id="executando-tensores-e-modelos-na-gpu">Executando tensores e modelos na GPU<a href="#executando-tensores-e-modelos-na-gpu" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Para acelerar cálculos, especialmente em redes neurais grandes, é comum <strong>usar GPUs</strong>. Em PyTorch, isso significa <strong>mover tensores e modelos para a GPU</strong> antes de realizar operações.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Verifica se GPU está disponível</span>
+</span></span><span style="display:flex;"><span>device <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>device(<span style="color:#e6db74">&#34;cuda&#34;</span> <span style="color:#66d9ef">if</span> torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available() <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;cpu&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Mover tensor para GPU</span>
+</span></span><span style="display:flex;"><span>tensor <span style="color:#f92672">=</span> tensor<span style="color:#f92672">.</span>to(device)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Mover modelo para GPU</span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>to(device)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Agora todas as operações com o tensor ou modelo serão feitas na GPU</span>
+</span></span></code></pre></div><p>Usar GPU <strong>reduz drasticamente o tempo de treinamento</strong>, pois GPUs são otimizadas para operações matriciais e paralelização em larga escala.</p>
 
       </div></div>
 

@@ -13,14 +13,7 @@
       <link>http://localhost:1313/posts/aprendizagem-pytorch/</link>
       <pubDate>Tue, 04 Nov 2025 22:52:35 -0300</pubDate>
       <guid>http://localhost:1313/posts/aprendizagem-pytorch/</guid>
-      <description>&lt;h1 id=&#34;este-post-vai-servir-como-base-de-anotações-para-meus-estudos-sobre-pytorch&#34;&gt;Este post vai servir como base de anotações para meus estudos sobre Pytorch.&lt;/h1&gt;&#xA;&lt;p&gt;Pytorch é uma biblioteca de machine learning desenvolvida pelo Facebook AI Research (FAIR). Ela é amplamente utilizada para tarefas de aprendizado profundo (deep learning) e oferece uma interface flexível e dinâmica para a construção e treinamento de redes neurais.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Recomendação Livro</title>
-      <link>http://localhost:1313/posts/recomendacao-livro/</link>
-      <pubDate>Thu, 09 Jan 2025 13:31:25 -0300</pubDate>
-      <guid>http://localhost:1313/posts/recomendacao-livro/</guid>
-      <description>&lt;p&gt;Estive lendo um livro fascinante sobre &lt;strong&gt;C, Assembly e arquitetura x86-64&lt;/strong&gt;, que abriu minha mente para compreender como muitas coisas funcionam nos bastidores. O conteúdo explora desde os &lt;strong&gt;fundamentos da arquitetura de processadores&lt;/strong&gt;, &lt;strong&gt;funcionamento e utilidade dos registradores&lt;/strong&gt; e vários &lt;strong&gt;conceitos utilizados na programação em C&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Se você, assim como eu, aprecia &amp;ldquo;escovar bits&amp;rdquo;, este livro é uma leitura indispensável. Ele serve como uma excelente introdução para quem deseja mergulhar no universo da programação de baixo nível e compreender as camadas mais profundas que sustentam o software que utilizamos no dia a dia.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;intuito-do-post&#34;&gt;Intuito do post:&lt;/h1&gt;&#xA;&lt;p&gt;Servir como um guia de referência para PyTorch&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-é-o-pytorch&#34;&gt;O que é o PyTorch?&lt;/h2&gt;&#xA;&lt;p&gt;Pytorch é uma biblioteca de machine learning desenvolvida pelo Facebook AI Research (FAIR). Ela é amplamente utilizada para tarefas de aprendizado profundo (deep learning) e oferece uma interface flexível e dinâmica para a construção e treinamento de redes neurais.&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-são-tensores&#34;&gt;O que são Tensores?&lt;/h2&gt;&#xA;&lt;p&gt;Os &lt;strong&gt;tensores&lt;/strong&gt; são estruturas de dados fundamentais em &lt;em&gt;machine learning&lt;/em&gt; que generalizam números, vetores e matrizes para múltiplas dimensões. Eles servem para representar e processar dados numéricos de forma eficiente, sendo usados para armazenar entradas, pesos e saídas de modelos de aprendizado de máquina. Em frameworks como &lt;strong&gt;TensorFlow&lt;/strong&gt; e &lt;strong&gt;PyTorch&lt;/strong&gt;, os tensores permitem realizar operações matemáticas em larga escala e de maneira otimizada, especialmente em GPUs, além de possibilitar o cálculo automático de gradientes, essencial para o treinamento de redes neurais.&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025 01 07</title>
