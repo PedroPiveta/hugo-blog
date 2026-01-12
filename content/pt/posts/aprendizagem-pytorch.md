@@ -1,18 +1,36 @@
-+++
-title = "Aprendizagem Pytorch"
-date = "2025-11-11T21:34:35-03:00"
-#dateFormat = "2006-01-02" # This value can be configured for per-post date formatting
-author = "Pedro Piveta Barrotti"
-authorTwitter = "PedroPiBarrotti" #do not include @
-cover = "/images/aprendizagem-pytorch/logo.png"
-tags = ["programação", "pytorch", "machine learning"]
-keywords = ["python", "pytorch", "machine learning"]
-description = "Anotação de estudo sobre Pytorch"
-showFullContent = false
-readingTime = true
-hideComments = false
-draft = false
-+++
+---
+title: "Aprendizagem Pytorch"
+date: "2025-11-11T21:34:35-03:00"
+tags: ["programação", "pytorch", "machine learning"]
+author: "Pedro Piveta Barrotti"
+showToc: true
+TocOpen: false
+draft: false
+hidemeta: false
+comments: false
+description: "Anotação de estudo sobre Pytorch"
+canonicalURL: ""
+disableHLJS: false
+disableShare: false
+hideSummary: false
+searchHidden: false
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+ShowWordCount: true
+ShowRssButtonInSectionTermList: true
+UseHugoToc: true
+cover:
+    image: "/images/aprendizagem-pytorch/logo.png"
+    alt: ""
+    caption: ""
+    relative: false
+    hidden: false
+editPost:
+    URL: ""
+    Text: "Suggest Changes"
+    appendFilePath: true
+---
 
 # Intuito do post:
 
@@ -32,20 +50,6 @@ Tensores
 ## O que são Tensores?
 
 Os **tensores** são estruturas de dados fundamentais em _machine learning_ que generalizam números, vetores e matrizes para múltiplas dimensões. Eles servem para representar e processar dados numéricos de forma eficiente, sendo usados para armazenar entradas, pesos e saídas de modelos de aprendizado de máquina. Em frameworks como **TensorFlow** e **PyTorch**, os tensores permitem realizar operações matemáticas em larga escala e de maneira otimizada, especialmente em GPUs, além de possibilitar o cálculo automático de gradientes, essencial para o treinamento de redes neurais.
-
-## Criação e tipos de tensores
-
-- Scalar: um único valor numérico (0D).
-
-```python
-scalar = torch.tensor(7)
-```
-
-- Vector: uma sequência de valores (1D)
-
-```python
-vector = torch.tensor([7, 7])
-```
 
 - Matrix: uma tabela de valores com linhas e colunas (2D)
 
@@ -198,47 +202,4 @@ tensor.argmax()
 
 ```python
 # Exemplos
-torch.reshape(tensor, (2, 3))
-tensor.view(2, 3)
-torch.stack([t1, t2], dim=0)
-tensor.squeeze()
-tensor.unsqueeze(0)
-tensor.permute(1, 0)
 ```
-
-## Reprodutibilidade (controlando a aleatoriedade)
-
-As **seeds** (sementes aleatórias) servem para **tornar os resultados reproduzíveis** em experimentos de _machine learning_.
-Ao definir uma seed, você garante que as operações aleatórias — como inicialização de pesos, embaralhamento de dados ou geração de amostras — produzam sempre os mesmos resultados em execuções diferentes.
-
-```python
-# Definindo uma seed em PyTorch
-torch.manual_seed(42)
-torch.cuda.manual_seed(42)
-```
-
-Isso é essencial para **comparar modelos**, **depurar código** e **validar experimentos** de forma consistente.
-
-### Executando tensores e modelos na GPU
-
-Para acelerar cálculos, especialmente em redes neurais grandes, é comum **usar GPUs**. Em PyTorch, isso significa **mover tensores e modelos para a GPU** antes de realizar operações.
-
-```python
-import torch
-
-# Verifica se GPU está disponível
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-# Mover tensor para GPU
-tensor = tensor.to(device)
-
-# Mover modelo para GPU
-model = model.to(device)
-
-# Agora todas as operações com o tensor ou modelo serão feitas na GPU
-```
-
-Usar GPU **reduz drasticamente o tempo de treinamento**, pois GPUs são otimizadas para operações matriciais e paralelização em larga escala.
-
-</details>
-
