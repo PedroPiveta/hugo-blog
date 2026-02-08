@@ -124,7 +124,7 @@ buildExpired = false
   
   [[params.socialIcons]]
     name = "linkedin"
-    url = "https://linkedin.com/in/pedropiveta"
+    url = "https://linkedin.com/in/pedro-piveta-barrotti"
 
   [params.cover]
     hidden = false
