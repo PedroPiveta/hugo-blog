@@ -1,7 +1,8 @@
-baseURL = "https://examplesite.com/"
-title = "ExampleSite"
-pagination.pagerSize = 5
+baseURL = "https://blog.pedropiveta.com.br/"
+title = "Pedro Piveta Blog"
 theme = "PaperMod"
+defaultContentLanguage = "pt"
+defaultContentLanguageInSubdir = false
 
 enableRobotsTXT = true
 buildDrafts = false
@@ -15,15 +16,76 @@ buildExpired = false
 [markup]
   [markup.highlight]
     noClasses = false
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    lineNos = false
+    style = "monokai"
 
+# Configuração de Idiomas
+[languages]
+  [languages.pt]
+    languageName = "Português"
+    languageCode = "pt-BR"
+    contentDir = "content/pt"
+    weight = 1
+    title = "Blog do Pedro Piveta"
+    
+    [languages.pt.params]
+      description = "Blog sobre programação, tecnologia e aprendizado"
+      author = "Pedro Piveta Barrotti"
+      
+    [languages.pt.params.homeInfoParams]
+      Title = "Olá! 👋"
+      Content = "Bem-vindo ao meu blog sobre programação, tecnologia e aprendizado contínuo"
+    
+    [[languages.pt.menu.main]]
+      identifier = "tags"
+      name = "Tags"
+      url = "/tags/"
+      weight = 20
+    
+    [[languages.pt.menu.main]]
+      identifier = "buscar"
+      name = "Buscar"
+      url = "/search/"
+      weight = 30
+
+  [languages.en]
+    languageName = "English"
+    contentDir = "content/en"
+    languageCode = "en-US"
+    weight = 2
+    title = "Pedro Piveta's Blog"
+    
+    [languages.en.params]
+      description = "Blog about programming, technology and learning"
+      author = "Pedro Piveta Barrotti"
+      
+    [languages.en.params.homeInfoParams]
+      Title = "Hi there! 👋"
+      Content = "Welcome to my blog about programming, technology and continuous learning"
+    
+    [[languages.en.menu.main]]
+      identifier = "tags"
+      name = "Tags"
+      url = "/en/tags/"
+      weight = 20
+    
+    [[languages.en.menu.main]]
+      identifier = "search"
+      name = "Search"
+      url = "/en/search/"
+      weight = 30
+
+# Outputs para busca
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Parâmetros Globais do PaperMod
 [params]
   env = "production"
-  title = "ExampleSite"
-  description = "ExampleSite description"
-  keywords = ["Blog", "Portfolio", "PaperMod"]
-  author = "Me"
-  images = ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat = "January 2, 2006"
+  DateFormat = "2 January 2006"
   defaultTheme = "auto"
   disableThemeToggle = false
 
@@ -31,7 +93,7 @@ buildExpired = false
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
-  ShowCodeCopyButtons = false
+  ShowCodeCopyButtons = true
   ShowWordCount = true
   ShowRssButtonInSectionTermList = true
   UseHugoToc = true
@@ -40,68 +102,42 @@ buildExpired = false
   comments = false
   hidemeta = false
   hideSummary = false
-  showtoc = false
+  showtoc = true
   tocopen = false
 
   [params.assets]
-    favicon = "<link / abs url>"
-    favicon16x16 = "<link / abs url>"
-    favicon32x32 = "<link / abs url>"
-    apple_touch_icon = "<link / abs url>"
-    safari_pinned_tab = "<link / abs url>"
+    disableHLJS = false
+    disableFingerprinting = false
 
   [params.label]
-    text = "Home"
-    icon = "/apple-touch-icon.png"
+    text = "Blog Pedro Piveta Barrotti"
     iconHeight = 35
 
-  [params.profileMode]
-    enabled = false
-    title = "ExampleSite"
-    subtitle = "This is subtitle"
-    imageUrl = "<img location>"
-    imageWidth = 120
-    imageHeight = 120
-    imageTitle = "my image"
-  [[params.profileMode.buttons]]
-    name = "Posts"
-    url = "posts"
-  [[params.profileMode.buttons]]
-    name = "Tags"
-    url = "tags"
-
-  [params.homeInfoParams]
-    Title = "Hi there 👋"
-    Content = "Welcome to my blog"
-
-  [[params.socialIcons]]
-    name = "x"
-    url = "https://x.com/"
-  [[params.socialIcons]]
-    name = "stackoverflow"
-    url = "https://stackoverflow.com"
+  # Ícones Sociais
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/"
-
-  [params.analytics]
-    [params.analytics.google]
-      SiteVerificationTag = "XYZabc"
-    [params.analytics.bing]
-      SiteVerificationTag = "XYZabc"
-    [params.analytics.yandex]
-      SiteVerificationTag = "XYZabc"
+    url = "https://github.com/pedropiveta"
+  
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/PedroPiBarrotti"
+  
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/pedropiveta"
 
   [params.cover]
-    hidden = true
-    hiddenInList = true
-    hiddenInSingle = true
+    hidden = false
+    hiddenInList = false
+    hiddenInSingle = false
+    responsiveImages = false
 
   [params.editPost]
-    URL = "https://github.com/<path_to_repo>/content"
-    Text = "Suggest Changes"
+    URL = "https://github.com/pedropiveta/hugo-blog/content"
+    Text = "Sugerir alterações / Suggest changes"
     appendFilePath = true
 
+  # Configuração de busca
   [params.fuseOpts]
     isCaseSensitive = false
     shouldSort = true
@@ -112,24 +148,8 @@ buildExpired = false
     limit = 10
     keys = ["title", "permalink", "summary", "content"]
 
-[menu]
-  [[menu.main]]
-    identifier = "categories"
-    name = "categories"
-    url = "/categories/"
-    weight = 10
-  [[menu.main]]
-    identifier = "tags"
-    name = "tags"
-    url = "/tags/"
-    weight = 20
-  [[menu.main]]
-    identifier = "example"
-    name = "example.org"
-    url = "https://example.org"
-    weight = 30
-
 pygmentsUseClasses = true
 
+# Módulos Hugo
 [[module.imports]]
   path = "github.com/adityatelange/hugo-PaperMod"

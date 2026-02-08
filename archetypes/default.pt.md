@@ -1,16 +1,16 @@
 ---
-title: "Por que criei esse blog?"
-date: 2025-01-07T13:33:38-03:00
-tags: ["meta", "blog"]
-author: "Pedro Piveta"
-showToc: false
+title: '{{ replace .File.ContentBaseName "-" " " | title }}'
+date: {{ .Date }}
+tags: []
+author: "Pedro Piveta Barrotti"
+showToc: true
 TocOpen: false
-draft: false
+draft: true
 hidemeta: false
 comments: false
-description: "Meu primeiro post explicando os objetivos deste blog"
+description: ""
 canonicalURL: ""
-disableHLJS: true
+disableHLJS: false
 disableShare: false
 hideSummary: false
 searchHidden: false
@@ -25,11 +25,11 @@ cover:
     alt: ""
     caption: ""
     relative: false
-    hidden: true
+    hidden: false
 editPost:
     URL: "https://github.com/pedropiveta/hugo-blog/content/pt"
     Text: "Sugerir alterações"
     appendFilePath: true
 ---
 
-Meu principal objetivo é testar tecnologias como o Hugo, mas além disso esse blog servirá como uma forma de compartilhar coisas desde projetos até o que estou aprendendo no momento.
+Conteúdo do post aqui...
