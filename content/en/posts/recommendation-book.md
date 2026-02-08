@@ -28,7 +28,7 @@ cover:
     relative: false
     hidden: false
 editPost:
-    URL: "https://github.com/pedropiveta/hugo-blog/content/en"
+    URL: "https://github.com/PedroPiveta/hugo-blog/tree/master/content/en"
     Text: "Suggest Changes"
     appendFilePath: true
 ---
